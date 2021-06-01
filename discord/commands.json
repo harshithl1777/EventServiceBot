@@ -1,0 +1,6 @@
+{
+  "commands": {
+      "name": "bulk_email",
+      "description": "Bulk emails sponsors from Notion database"
+    }
+}
