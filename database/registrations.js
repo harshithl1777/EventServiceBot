@@ -1,7 +1,7 @@
 const Database = require("@replit/database");
 const db = new Database();
 
-const addToReport = async () => {
+const addToReport = async (referral) => {
   const existingRegistrations = await db.get("dailyRegistrations");
   const existingEmailsSent = await db.get('emailsSent');
   const totalRegistrations = await db.get('totalRegistrations');
@@ -15,6 +15,7 @@ const getReportData = async () => {
   const registrations = await db.get("dailyRegistrations");
   const emails = await db.get('emailsSent');
   const total = await db.get('totalRegistrations');
+  const otherTotal = await db.get('dailyOtherRegistrations');
   return { registrations, emails, total };
 }
 

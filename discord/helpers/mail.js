@@ -15,6 +15,18 @@ const createLoadingEmbed = (numOfEmails, id) => {
   return sendingEmbed;
 }
 
+const createUnAuthEmbed = (id) => {
+  const sendingEmbed = new Discord.MessageEmbed()
+  .setColor('#f94343')
+  .setTitle('Unauthorized')
+  .setDescription(`You're not authorized to use this command. This is a safeguard to prevent anyone from accidentally spamming sponsors. If you require a bulk email request, please ask Harshith to initiate it.`)
+  .addField('Request Creator', `<@!${id}>`, true)
+  .setTimestamp()
+  .setFooter('XHacker Bot © XHacks 2021');
+  return sendingEmbed;
+}
+
+
 const createSuccessEmbed = (success, fail, id) => {
   const sendingEmbed = new Discord.MessageEmbed()
   .setColor('#20b2aa')
@@ -43,5 +55,6 @@ const createErrorEmbed = (error, id) => {
 module.exports = {
   createLoadingEmbed,
   createSuccessEmbed,
-  createErrorEmbed
+  createErrorEmbed,
+  createUnAuthEmbed
 };

@@ -1,6 +1,48 @@
 {
-  "commands": {
+  "commands": [
+    {
       "name": "bulk_email",
       "description": "Bulk emails sponsors from Notion database"
+    },
+    {
+    "name": "registration_status",
+      "description": "Gets the current registration status and numbers"
+    },
+    {
+    "name": "new_post",
+      "description": "Notifies #updates of a new outreach post in a server",
+      "options": [
+        {
+          "name": "server_name",
+          "description": "The name of the server you posted in",
+          "type": 3,
+          "required": true
+        },
+        {
+          "name": "channel",
+          "description": "The channel of the server you posted in",
+          "type": 3,
+          "required": true
+        },
+        {
+          "name": "everyone_mentioned",
+          "description": "Whether or not you mentioned @everyone in the post",
+          "type": 5,
+          "required": true
+        },
+        {
+          "name": "member_count",
+          "description": "The number of members that the server has",
+          "type": 3,
+          "required": true
+        },
+        {
+          "name": "notes",
+          "description": "Anything else that needs to be mentioned",
+          "type": 3,
+          "required": false
+        }
+      ]
     }
+  ]
 }
